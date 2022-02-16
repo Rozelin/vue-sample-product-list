@@ -1,0 +1,74 @@
+/* -------------------- */
+/* Buttons */
+
+button,
+.button {
+  @include text-plain-medium;
+  @include text-bold;
+
+  outline: none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+
+  .icon {
+    margin-right: 5px;
+    vertical-align: sub;
+  }
+}
+
+.button-primary {
+  @extend .button;
+  background-color: $color-secondary;
+  border: 1px solid $color-secondary;
+  color: white;
+
+  .bounce-circle {
+    background-color: $color-white;
+  }
+
+  &:hover{
+    background-color: scale-color($color-secondary, $lightness: 20%);
+    box-shadow: 1px 1px 6px 0 rgba($color-black, 0.2);
+    border: 1px solid scale-color($color-secondary, $lightness: 20%);
+  }
+
+  &:active{
+    box-shadow: none;
+  }
+}
+
+/* -------------------- */
+/* Links */
+
+
+
+/* -------------------- */
+/* Text Input */
+
+
+
+
+/* -------------------- */
+/* Select */
+
+
+
+
+/* -------------------- */
+/* Checkbox */
+
+
+
+
+/* -------------------- */
+/* Range */

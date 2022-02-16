@@ -1,0 +1,83 @@
+@import "fonts";
+
+@mixin text-fancy-big {
+  font-family: map-get($font-families, fancy);
+  font-size: 32px;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: -0.2px;
+}
+@mixin text-fancy-medium {
+  font-family: map-get($font-families, fancy);
+  font-size: 24px;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+}
+@mixin text-fancy-small {
+  font-family: map-get($font-families, fancy);
+  font-size: 18px;
+  font-stretch: normal;
+  line-height: 1.78;
+  letter-spacing: normal;
+}
+@mixin text-fancy-mini {
+  font-family: map-get($font-families, fancy);
+  font-size: 16px;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+}
+
+// text-plain
+
+@mixin text-plain-huge {
+  font-family: map-get($font-families, plain);
+  font-size: 24px;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: 1px;
+}
+@mixin text-plain-big {
+  font-family: map-get($font-families, plain);
+  font-size: 18px;
+  font-stretch: normal;
+  line-height: 1.44;
+  letter-spacing: 0.8px;
+}
+@mixin text-plain-medium {
+  font-family: map-get($font-families, plain);
+  font-size: 14px;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 0.8px;
+}
+@mixin text-plain-small {
+  font-family: map-get($font-families, plain);
+  font-size: 12px;
+  font-stretch: normal;
+  line-height: 1.42;
+  letter-spacing: 0.6px;
+}
+@mixin text-plain-mini {
+  font-family: map-get($font-families, plain);
+  font-size: 10px;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+}
+@mixin text-plain-micro {
+  font-family: map-get($font-families, plain);
+  font-size: 9px;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.6px;
+}
+
+@mixin text-italic {
+  font-style: italic;
+}
+
+@mixin text-bold {
+  font-weight: bold;
+}

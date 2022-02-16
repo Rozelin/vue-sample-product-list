@@ -1,0 +1,68 @@
+/* ------------------------ */
+/* 12-column flexbox grid   */
+/* .col-l-{num}: screen > 769px */
+/* .col-m-{num}: screen < 769px */
+/* .col-s-{num}: screen < 576px */
+
+$tablet-breakpoint: 769px;
+$phone-breakpoint: 576px;
+$col-count: 12;
+$gutter: 20px;
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.row {
+  width: calc(100% + 20px);
+  margin: 0 -$gutter/2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: inherit;
+  align-items: flex-start;
+}
+
+.centered {
+  justify-content: center !important;
+}
+
+.vertically-aligned {
+  height: 100%;
+  align-items: center !important;
+}
+
+[class*='col-l-'], [class*='col-m-'], [class*='col-s-'] {
+  padding: $gutter/2;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  @for $i from 1 to $col-count+1 {
+    .col-l-#{$i} {
+      -webkit-flex-basis: (100% / 12) * $i;
+      flex-basis: (100% / 12) * $i;
+      max-width: (100% / 12) * $i;
+    }
+  }
+}
+@media (max-width: $tablet-breakpoint) {
+  @for $i from 1 to $col-count+1 {
+    .col-m-#{$i} {
+      -webkit-flex-basis: (100% / 12) * $i;
+      flex-basis: (100% / 12) * $i;
+      max-width: (100% / 12) * $i;
+    }
+  };
+}
+
+@media (max-width: $phone-breakpoint) {
+  @for $i from 1 to $col-count+1 {
+    .col-s-#{$i} {
+      -webkit-flex-basis: (100% / 12) * $i;
+      flex-basis: (100% / 12) * $i;
+      max-width: (100% / 12) * $i;
+    }
+  };
+}
